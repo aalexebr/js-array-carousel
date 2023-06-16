@@ -26,7 +26,15 @@ box.classList.add('box')
 document.getElementById('position').append(box)
 
 
-// create <img>
+// create <img> (check to work)
 let img = document.createElement('img')
-img.src = imgArray[0].src;
-box.append(img)
+// img.src = imgArray[0].src;
+// box.append(img)
+
+// cycle
+
+for (i = 0; i<imgArray.length; i++){
+    img.src = imgArray[i].src;
+    box.append(img)
+    box.classList.add('display')
+}
