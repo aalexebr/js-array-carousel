@@ -13,28 +13,53 @@ imgArray[3].src = 'img/04.webp';
 imgArray[4] = new Image();
 imgArray[4].src = 'img/05.webp';
 
-// imgArray.push('img/02.webp')
-// imgArray.push('img/03.webp')
-// imgArray.push('img/04.webp')
-// imgArray.push('img/05.webp')
 
-console.log(imgArray)
 
 // create .box div
-let box = document.createElement('div')
-box.classList.add('box')
-document.getElementById('position').append(box)
+// const box = document.createElement('div')
+// box.classList.add('box')
+// document.getElementById('position').append(box)
 
 
 // create <img> (check to work)
-let img = document.createElement('img')
-// img.src = imgArray[0].src;
+// const img = document.createElement('img')
+// img.src =imgArray[0].src;
 // box.append(img)
+const up = document.getElementById('up')
+const down = document.getElementById('down')
 
 // cycle
+//             img.src = imgArray[0].src;
+//             box.append(img)
+//             box.classList.add('display')
+//             let scope = 0
+// down.addEventListener('click',
+//     function(){
+//         scope = 1
+//         for (let i = 0; i<imgArray.length; i++){
+            
+//             if(scope =1){
+//                 img.src = imgArray[(i)].src;
+//                 box.append(img)
+//                 box.classList.add('display')
 
-for (i = 0; i<imgArray.length; i++){
-    img.src = imgArray[i].src;
+//                 console.log(imgArray[i])
+            
+//             }  
+            
+
+//         }
+//     }   
+// )
+
+for (let i=0; i<imgArray.length; i++){
+
+
+    const box = document.createElement('div')
+    box.classList.add('box')
+    document.getElementById('position').append(box)
+    let img = document.createElement('img')
+    img.src = imgArray[(i)].src;
     box.append(img)
     box.classList.add('display')
 }
