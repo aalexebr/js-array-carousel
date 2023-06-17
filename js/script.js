@@ -28,6 +28,7 @@ console.log(document.querySelector(`img:nth-of-type(${count+1})`))
 down.addEventListener('click', function(){
     if(count < imgArray.length){
         count ++
+        document.querySelector(`img:nth-of-type(${count})`).classList.remove('display')
     }
     else{
         count=0
