@@ -6,24 +6,24 @@ const imgArray = []
 
 
 // i=1
-const box = document.createElement("div");
-box.classList.add('box')
-document.getElementById('position').append(box)
+// const box = document.createElement("div");
+// box.classList.add('box')
+// document.getElementById('position').append(box)
 // document.querySelector('.box').innerHTML += `<img src='${imgArray[i]}'> `
 
 for (i=0; i <5; i++){
     imgArray[i] = `img/0${i+1}.webp`
 
-    document.querySelector('.box').innerHTML += `<img src='${imgArray[i]}' class='display'> `
+    document.querySelector('.img-position').innerHTML += `<img src='${imgArray[i]}' class="d"> `
 }
 
 console.log(i)
 console.log(imgArray)
-
-
 const down = document.getElementById('down')
-let count = 1
-document.querySelector(`img:nth-of-type(${count+1})`)
+
+let count = 0
+document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
+
 console.log(document.querySelector(`img:nth-of-type(${count+1})`))
 down.addEventListener('click', function(){
     if(count < imgArray.length){
@@ -32,7 +32,7 @@ down.addEventListener('click', function(){
     else{
         count=0
     }
-    // document.querySelector(`img:nth-of-type(${count})`).classList.add('display')
+    document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
     }
 )
 // console.log(document.querySelector(`img:nth-of-type()`))
