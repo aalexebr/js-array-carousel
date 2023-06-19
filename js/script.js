@@ -48,7 +48,7 @@ down.addEventListener('click', function(){
 const up = document.getElementById('up')
 up.addEventListener('click', 
     function(){
-        if(count > 0){
+        if(count > 1){
             document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
             count --
             document.querySelector(`img:nth-of-type(${count})`).classList.add('display') 
