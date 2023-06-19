@@ -14,7 +14,7 @@ const imgArray = []
 for (i=0; i <5; i++){
     imgArray[i] = `img/0${i+1}.webp`
 
-    document.querySelector('.img-position').innerHTML += `<img src='${imgArray[i]}' class="d"> `
+    document.querySelector('.img-position').innerHTML += `<img src='${imgArray[i]}' class=""> `
 }
 
 console.log(i)
@@ -27,20 +27,23 @@ document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
 
 console.log(document.querySelector(`img:nth-of-type(${count+1})`))
 
-console.log(count)
+console.log('out of function count',count)
 down.addEventListener('click', function(){
     count ++
-    document.querySelector(`img:nth-of-type(${count})`).classList.remove('display')
+    document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
     
     if(count < imgArray.length){
-           
+       
+        // document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')   
+        
     }
     else{
         count = 0
         
+        console.log('outisde',count)
     }  
-    document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
-    console.log(count)
+    document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display') 
+    
     }
 )
 
