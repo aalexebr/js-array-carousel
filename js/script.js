@@ -48,7 +48,7 @@ down.addEventListener('click', function(){
 )
 
 const up = document.getElementById('up')
-let count2 = 0
+let count2 = 5
 up.addEventListener('click', function(){
     count2 --
     document.querySelector(`img:nth-of-type(${count2})`).classList.remove('display')
@@ -60,11 +60,11 @@ up.addEventListener('click', function(){
         
     }
     else{
-        count2 = 0
+        count2 = 5
         console.log(count2)
     }
     
-    document.querySelector(`img:nth-of-type(${count2+1})`).classList.add('display')
+    document.querySelector(`img:nth-of-type(${count2-1})`).classList.add('display')
 
     }
 )
