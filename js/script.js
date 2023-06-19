@@ -29,20 +29,23 @@ document.querySelector(`img:nth-of-type(${count})`).classList.add('display')
 console.log(document.querySelector(`img:nth-of-type(${count+1})`))
 
 console.log('out of function count',count)
-down.addEventListener('click', function(){
-    
-     
-    if(count < imgArray.length){
-        document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
-         count ++ 
-        document.querySelector(`img:nth-of-type(${count})`).classList.add('display') 
-    }
-    else{
-             
-        console.log('end',count)
-    }  
-     
-    }
+down.addEventListener('click', 
+    function(){
+        if(count < imgArray.length){
+            // order of execution
+            // 1 step is removes the display on the current image
+            // THEN increases count by 1 (count++)
+            // then adds display to the new count number
+            document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
+            count ++ 
+            document.querySelector(`img:nth-of-type(${count})`).classList.add('display') 
+        }
+        else{
+                
+            console.log('end',count)
+        }  
+        
+        }
 )
 
 const up = document.getElementById('up')
