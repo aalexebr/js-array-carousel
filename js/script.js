@@ -66,48 +66,6 @@ up.addEventListener('click',
 
 
 
-
-// down.addEventListener('click', function(){
-//     count --
-//     console.log(count)
-//     document.querySelector(`img:nth-of-type(${count})`).classList.remove('display')
-    
-    
-//     if(count < imgArray.length){
-        
-        
-//     }
-//     else{
-//         count=0
-//     }
-//     document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
-//     }
-// )
-// console.log(document.querySelector(`img:nth-of-type()`))
-// for i=1 to <=5
-//     imgArray[i] = `img/0${i}.webp`
-//     if(i == 1) 
-
-//     document.querySelector('.containerImmagini').innerHTML += `<img src="img/0${i}.webp" class="active">`
-
-
-// const up = document.getElementById('up')
-// const down = document.getElementById('down')
-
-// let count = 1
-
-// down.addEventListener('click', function(){
-//     if(count < numero immagini)
-//         count++
-//     else
-//         count = 0
-//     document.querySelector(`.containerImmagini > img:nth-chidl(${count+1})`).classList.add('active')
-    
-//     img.src = imgArray[count]
-// })
-
-
-
 // imgArray[0] = new Image();
 // imgArray[0].src = 'img/01.webp';
 // imgArray[1] = new Image();
