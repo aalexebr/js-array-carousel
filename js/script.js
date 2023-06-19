@@ -14,7 +14,8 @@ const imgArray = []
 for (i=0; i <5; i++){
     imgArray[i] = `img/0${i+1}.webp`
 
-    document.querySelector('.img-position').innerHTML += `<img src='${imgArray[i]}' class=""> `
+    document.querySelector('.img-position').innerHTML += 
+    `<img src='${imgArray[i]}' class=""> `
 }
 
 console.log(i)
@@ -22,52 +23,46 @@ console.log(imgArray)
 console.log(imgArray[0])
 const down = document.getElementById('down')
 
-let count = 0
-document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')
+let count = 1
+document.querySelector(`img:nth-of-type(${count})`).classList.add('display')
 
 console.log(document.querySelector(`img:nth-of-type(${count+1})`))
 
 console.log('out of function count',count)
 down.addEventListener('click', function(){
-    count ++
-    document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
     
+     
     if(count < imgArray.length){
-       
-        // document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display')   
-        
+        document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
+         count ++ 
+        document.querySelector(`img:nth-of-type(${count})`).classList.add('display') 
     }
     else{
-        count = 0
-        
-        console.log('outisde',count)
+             
+        console.log('end',count)
     }  
-    document.querySelector(`img:nth-of-type(${count+1})`).classList.add('display') 
-    
+     
     }
 )
 
 const up = document.getElementById('up')
-let count2 = 5
-up.addEventListener('click', function(){
-    count2 --
-    document.querySelector(`img:nth-of-type(${count2})`).classList.remove('display')
-    
-    if(count2 < imgArray.length){
+up.addEventListener('click', 
+    function(){
+        if(count > 0){
+            document.querySelector(`img:nth-of-type(${count})`).classList.remove('display') 
+            count --
+            document.querySelector(`img:nth-of-type(${count})`).classList.add('display') 
+        }
+        else{
+                
+            console.log('end',count)
+        }  
         
-    console.log(count2)
-    
-        
-    }
-    else{
-        count2 = 5
-        console.log(count2)
-    }
-    
-    document.querySelector(`img:nth-of-type(${count2-1})`).classList.add('display')
-
     }
 )
+
+
+
 
 // down.addEventListener('click', function(){
 //     count --
